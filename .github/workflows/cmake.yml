@@ -46,6 +46,7 @@ jobs:
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v3
       with:
+        env: CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         directory: ${{github.workspace}}/build-test
         files: ${{github.workspace}}/build-test/coverage/coverage.xml
         verbose: true
